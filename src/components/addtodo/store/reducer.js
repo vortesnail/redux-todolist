@@ -15,6 +15,9 @@ export default (state = defaultState, action) => {
       newState.todoList.push(newState.inputValue);
       newState.inputValue = '';
       return newState;
+    case actionTypes.FINISH_TODO_ITEM:
+			newState.todoList.splice(action.index, 1);
+      return newState;
 		default:
 			return state;
 	}

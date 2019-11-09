@@ -8,3 +8,8 @@ export const changeInputValue = (value) => ({
 export const addTodoListItem = () => ({
   type: actionTypes.ADD_TODO,
 })
+
+export const deleteTodo = (index) => ({
+  type: actionTypes.FINISH_TODO_ITEM,
+  index,
+})
